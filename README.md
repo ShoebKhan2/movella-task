@@ -1,9 +1,6 @@
-# movella-task
-movella take home assesment
-
 ## Objective of the Task:
 
-* Building Container and Kubernetes solution for ABS application
+* Building container and kubernetes deployment solution for ABS-Guide application
 
 ## TechStack:
 1. Docker

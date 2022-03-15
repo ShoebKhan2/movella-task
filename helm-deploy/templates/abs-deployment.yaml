@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-abs-app
+  labels:
+    app: abs-app
+spec:
+  selector:
+    matchLabels:
+      app: abs-app
+  template:
+    metadata:
+      labels:
+        app: abs-app
+    spec:
+      containers:
+      - name: {{ .Release.Name }}-abs-app
+        image: {{.Values.image.registry}}/{{ .Values.image.repo }}:{{ .Values.image.tag }}
+        resources:
+{{ toYaml .Values.resource | indent 10 }}
+        ports:
+        - containerPort: {{ .Values.conatiner_port }}

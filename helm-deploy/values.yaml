@@ -1,0 +1,16 @@
+image:
+  registry: "shoeb151"
+  repo: "abs-app"
+  tag: "v1"
+
+resources:
+  limits:
+    memory: "128Mi"
+    cpu: "500m"
+
+conatiner_port: 80
+
+service:
+  port: 80
+  targetPort: 80
+  type: "ClusterIP"
